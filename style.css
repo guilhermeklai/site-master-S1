@@ -12,12 +12,14 @@ nav{
 .grid{
     flex-wrap: wrap;
     display: grid;
-    grid-auto-rows: 400px 220px 350px;
+    grid-auto-rows: 400px 220px 350px 200px 200px;
     grid-template-areas:
     "header header"
     "main main"
     "section aside"
-    "lorem lorem";
+    "lorem lorem"
+    "hi hi";
+    
 }
 
 header h1{
@@ -298,7 +300,84 @@ label .audio{
     opacity: 0.66;
 }
 
+.video div button:hover{
+    cursor: pointer;
+    background-color: rgb(4, 176, 255);
+    opacity: 0.8;
+}
+
 .video button img{
     width: 20px;
 }
 
+.lorem{
+    display: block;
+    text-align: center;
+    grid-area: lorem;
+    font-size: 1em;
+}
+
+.text-lorem{
+    display: block;
+    text-align: center;
+    padding: 0px 200px 0px 200px;
+    grid-area: lorem;
+    font-size: 1em;
+}
+
+.lorem p{
+    opacity: 0.55;
+
+}
+
+.lorem h3{
+    color: black;
+    font-size: 18px;
+}
+
+.pessoas{
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#face1{
+    background-image:linear-gradient(to right, rgb(255, 255, 255) , rgba(255, 255, 255, 0.171));
+    background-position: right bottom, left top;
+    background-repeat: no-repeat, repeat;
+}
+
+#face2{
+    background-image:linear-gradient(to left, rgb(255, 255, 255) , rgba(255, 255, 255, 0.171));
+    background-position: right bottom, left top;
+    background-repeat: no-repeat, repeat;
+}
+
+.green{
+    display: flex;
+    margin: 1px;
+    background-color: green;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+}
+
+.green img{
+    position: relative;
+    z-index: 1;
+}
+
+.green img:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.hi{
+    grid-area: hi;
+    display: block;
+    text-align: center;
+    grid-area: lorem;
+    font-size: 1em;
+}
