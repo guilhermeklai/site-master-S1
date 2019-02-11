@@ -12,13 +12,14 @@ nav{
 .grid{
     flex-wrap: wrap;
     display: grid;
-    grid-auto-rows: 400px 220px 350px 200px 200px;
+    grid-auto-rows: 400px 220px 350px 200px 200px 50px;
     grid-template-areas:
     "header header"
     "main main"
     "section aside"
     "lorem lorem"
-    "hi hi";
+    "hi hi"
+    "footer footer";
     
 }
 
@@ -39,17 +40,18 @@ header{
     display: flex;
     font-size: 16px;
     grid-area: header;
-    background-size: 100vw 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-image: url(./img/banner.png);
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 .text{
     margin-right: 50px;
     text-decoration: none;
     justify-content: space-evenly;
-
+    
 }
 
 .dot{
@@ -142,6 +144,7 @@ main div{
 .text2{
     margin: 0;
     opacity: 0.55;
+    text-align: center;
 }
 
 .p{
@@ -155,6 +158,14 @@ section{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    background-color: rgba(209, 207, 207, 0.979);
+    
+}
+
+.section-text{
+    margin-left: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
 }
 
 aside{
@@ -163,6 +174,7 @@ aside{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    background-color: rgba(209, 207, 207, 0.979);
 }
 
 .get-not p{
@@ -174,8 +186,9 @@ aside{
     justify-content: center;
 }
 div input{
- border: 0;
- padding: 12px;
+    border: 0;
+    padding: 12px;
+    border-radius: 10px 0px 0px 10px;
 }
 
 div button{
@@ -194,9 +207,10 @@ div button:hover{
 
 .video{
     background-image: url(./img/banner.png);
-    background-size: 400px 220px;
-    width: 350px;
-    height: 220px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 400px; 
+    height: 250px;
     border-radius: 10px 10px 10px 10px;
     display: flex;
     justify-content: space-evenly;
@@ -214,11 +228,9 @@ div button:hover{
     opacity: 0.9;
     display: flex;
     align-items: flex-end;
-    /* justify-content: center; */
+    justify-content: center;
     width: 250px ;
     margin-right: 5px;
-
-
 }
 
 label div{
@@ -318,7 +330,7 @@ label .audio{
 
 .lorem p{
     opacity: 0.55;
-
+    
 }
 
 .lorem h3{
@@ -392,6 +404,15 @@ label .audio{
     margin: 0px 2px 10px 2px;
 }
 
+footer{
+    background-color: rgba(209, 207, 207, 0.979);
+    grid-area: footer;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 footer a{
     text-decoration: none;
     display: inline-block;
@@ -405,30 +426,56 @@ footer a{
 
 @media (max-width: 901px) 
 {
-  #person
-   {
-    display: none;
-   }
+    #person
+    {
+        display: none;
+    }
 }
 
 @media (max-width: 826px) 
 {
-  .grid{
-    grid-auto-rows: 400px 220px 250px 300px 100px;
-    grid-template-areas:
-    "header header"
-    "main main"
-    "section section"
-    "aside aside"
-    "lorem lorem"
-    "hi hi";
-   }
+    .grid{
+        grid-auto-rows: 400px 250px 200px 400px 200px 50px 25px;
+        grid-template-areas:
+        "header header"
+        "main main"
+        "section section"
+        "aside aside"
+        "lorem lorem"
+        "hi hi"
+        "footer footer";
+    }
+
+     footer{
+        height: 50px;
+     }
+
+     main .text2{
+         margin-bottom: 100px;
+     }
+    
+    aside{
+        margin-top: 50px;
+    }
 }
 
 @media (max-width: 676px) 
 {
+    .grid{
+        grid-auto-rows: 400px 200px 200px 400px 200px 50px 25px;
+        grid-template-areas:
+        "header header"
+        "main main"
+        "section section"
+        "aside aside"
+        "lorem lorem"
+        "hi hi"
+        "footer footer";
+    }
     header {
         background-size: 170vw 400px;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
     .text .dot{
         font-size: 25px;
@@ -446,25 +493,25 @@ footer a{
         justify-content: space-around;
     }
     main .text2{
-    display: none;
-   }
-   .hand{
-    display: none;
+        display: none;
+    }
+    .hand{
+        display: none;
     }
     .text-lorem{
         padding: 0px;
     }
     #person2
-   {
-    display: none;
-   }
-
+    {
+        display: none;
+    }
+    
 }
 
 @media (max-width: 421px)
 {
     .shadow{
-        margin-left: 45px;
+        margin-left: 65px;
     }
     .text p {
         margin-left: 60px;
@@ -473,29 +520,42 @@ footer a{
 
 @media (max-width: 320px) 
 {
-  #person2
-   {
-    display: none;
-   }
-   footer{
-       font-size: 11px;
-   }
-   .section-text{
-       font-size: 14px;
-   }
-   main div {
-    display: flex;
-    justify-content: space-around;
-   }
-   .grid{
-    grid-auto-rows: 400px 80px 220px 300px 100px;
-    grid-template-areas:
-    "header header"
-    "main main"
-    "section section"
-    "aside aside"
-    "lorem lorem"
-    "hi hi";
-   }
-   
+    #person2
+    {
+        display: none;
+    }
+    footer{
+        font-size: 11px;
+    }
+    .section-text{
+        font-size: 14px;
+    }
+    main div {
+        display: flex;
+        justify-content: space-around;
+    }
+    .lorem{
+        margin-top: 70px;
+    }
+
+    aside{
+        margin: 0px;
+    }
+
+    .video iframe{
+        height: 100%;
+        width: auto;
+    }
+    
+    .grid{
+        grid-auto-rows: 400px 200px 230px 300px 100px;
+        grid-template-areas:
+        "header header"
+        "main main"
+        "section section"
+        "aside aside"
+        "lorem lorem"
+        "hi hi";
+    }
+    
 }
