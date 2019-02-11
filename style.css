@@ -112,31 +112,25 @@ main div{
     display: flex;
     align-items: center;
     justify-content: space-around;
-}
+} 
 
-main div p{
-    display: flex;
-    font-size: 18px;
-    text-align: center;
+
+.subtitle{
+    margin-top: 35px;
+    display: block;
+    justify-content: center;
     align-items: center;
-    justify-content: space-evenly;
-    padding: 0px 5px 0px 5px;
-    margin-left: 0px
-}
-
-.edit{
-    margin-left: 20px;
-}
-.flat{
-    margin-left: 85px;
 }
 
 .icons{
     border-radius: 50%;
     padding: 15px;
-    margin: 40px 65px 0px 65px;
     background-color: rgb(4, 216, 14);
     opacity: 0.8;
+}
+
+#icon3{
+    margin-left: 30px;
 }
 
 .icons:hover{
@@ -154,9 +148,6 @@ main div p{
     margin: 0;
 }
 
-.reach{
-    padding-left: 60px;
-}
 
 section{
     grid-area: section;
@@ -410,4 +401,101 @@ footer a{
     margin-left: 5px;
     margin-right: 5px;
     color: rgb(83, 82, 82);
+}
+
+@media (max-width: 901px) 
+{
+  #person
+   {
+    display: none;
+   }
+}
+
+@media (max-width: 826px) 
+{
+  .grid{
+    grid-auto-rows: 400px 220px 250px 300px 100px;
+    grid-template-areas:
+    "header header"
+    "main main"
+    "section section"
+    "aside aside"
+    "lorem lorem"
+    "hi hi";
+   }
+}
+
+@media (max-width: 676px) 
+{
+    header {
+        background-size: 170vw 400px;
+    }
+    .text .dot{
+        font-size: 25px;
+        display: flex;
+        justify-content: center;
+    }
+    .text p{
+        font-size: 25px;
+    }
+    .shadow{
+        margin-left: 70px;
+    }
+    main div{
+        display: flex;
+        justify-content: space-around;
+    }
+    main .text2{
+    display: none;
+   }
+   .hand{
+    display: none;
+    }
+    .text-lorem{
+        padding: 0px;
+    }
+    #person2
+   {
+    display: none;
+   }
+
+}
+
+@media (max-width: 421px)
+{
+    .shadow{
+        margin-left: 45px;
+    }
+    .text p {
+        margin-left: 60px;
+    }
+}
+
+@media (max-width: 320px) 
+{
+  #person2
+   {
+    display: none;
+   }
+   footer{
+       font-size: 11px;
+   }
+   .section-text{
+       font-size: 14px;
+   }
+   main div {
+    display: flex;
+    justify-content: space-around;
+   }
+   .grid{
+    grid-auto-rows: 400px 80px 220px 300px 100px;
+    grid-template-areas:
+    "header header"
+    "main main"
+    "section section"
+    "aside aside"
+    "lorem lorem"
+    "hi hi";
+   }
+   
 }
